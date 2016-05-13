@@ -30,7 +30,7 @@ namespace HuiwenStr
             }
 
             // 反转字符串
-            string tmp = Reserve(strData);
+            string tmp = Reversal(strData);
             foreach (char c in tmp)
             {
                 reCharList.Add(c);
@@ -158,7 +158,7 @@ namespace HuiwenStr
         }
 
         // 反转字符串
-        public static string Reserve(string str)
+        public static string Reversal(string str)
         {
             if (str.Length == 1)
             {
@@ -166,7 +166,7 @@ namespace HuiwenStr
             }
             else
             {
-                return str[str.Length - 1] + Reserve(str.Substring(0,str.Length-1));
+                return str[str.Length - 1] + Reversal(str.Substring(0, str.Length - 1));
             }
         }
 
